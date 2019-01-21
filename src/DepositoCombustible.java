@@ -14,8 +14,8 @@
  */
 public class DepositoCombustible {
 
-    private double depMax;
-    private double depNivel;
+    private int depMax;
+    private int depNivel;
 
    /**
 	* DepositoCombustible es el constructor de la clase. 
@@ -29,7 +29,7 @@ public class DepositoCombustible {
 	* @param tankLevel es la cantidad de combustible (medida en litros) que contiene el depósito inicialmente
 	* 
 	*/ 
-	DepositoCombustible(double tankMax, double tankLevel) {
+	DepositoCombustible(int tankMax, int tankLevel) {
        this.depMax   = tankMax;
        this.depNivel = tankLevel;
     }
@@ -39,7 +39,7 @@ public class DepositoCombustible {
     * 
     * @return	la cantidad de combustible en el depósito
     */
-    public double getDepositoNivel(){
+    public int getDepositoNivel(){
        return depNivel;
     }
 
@@ -48,7 +48,7 @@ public class DepositoCombustible {
     * 
     * @return	la capacidad (en litros) del depósito
 	*/
-	public double getDepositoMax(){
+	public int getDepositoMax(){
        return depMax;
     }
 
@@ -84,7 +84,7 @@ public class DepositoCombustible {
 	* @param amount 	Cantidad de combustible que añade
 	* 
 	*/
-    public void fill(double amount){
+    public void fill(int amount){
        depNivel = depNivel + amount;
     }
 
@@ -94,7 +94,7 @@ public class DepositoCombustible {
     * @param amount cantidad de fuel consumida
     * 
     */
-	public void consumir(double amount){
+	public void consumir(int amount){
        depNivel = depNivel - amount;
     }
 }
